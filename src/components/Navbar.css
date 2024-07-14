@@ -1,0 +1,25 @@
+.nav-container {
+  background-color: #001529;
+  padding: 20px;
+}
+
+.menu {
+  background-color: #001529;
+  border-bottom: none;
+}
+
+.menu .ant-menu-item {
+  color: #ffffff;
+}
+
+.menu .ant-menu-item a {
+  color: #ffffff;
+}
+
+.menu .ant-menu-item:hover {
+  background-color: #1890ff;
+}
+
+.menu .ant-menu-item-active {
+  background-color: #1890ff;
+}
