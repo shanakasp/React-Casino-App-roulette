@@ -1,15 +1,20 @@
+// src/App.js
 import React from "react";
-import "./App.css";
-import { Navbar } from "./components"; // This imports from components/index.js
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Game from "./pages/Game";
+import Home from "./pages/Home";
+import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <div className="App">
-      <div className="navbar">
-        <Navbar />
-      </div>
-      <div className="main"></div>
-      <div className="footer"></div>
+    <div>
+      <GlobalStyles />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/game" element={<Game />} />
+      </Routes>
     </div>
   );
 }

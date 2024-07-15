@@ -1,33 +1,32 @@
-import {
-  BulbOutlined,
-  FundOutlined,
-  HomeOutlined,
-  MoneyCollectOutlined,
-} from "@ant-design/icons";
-import { Menu } from "antd";
+// src/components/Navbar.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import styled from "styled-components";
 
 const Navbar = () => {
   return (
-    <div className="ndav-container">
-      <Menu mode="horizontal" className="menu">
-        <Menu.Item icon={<HomeOutlined />}>
-          <Link to="/">Home</Link>
-        </Menu.Item>
-        <Menu.Item icon={<FundOutlined />}>
-          <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-        </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
-          <Link to="/exchanges">Exchanges</Link>
-        </Menu.Item>
-        <Menu.Item icon={<BulbOutlined />}>
-          <Link to="/news">News</Link>
-        </Menu.Item>
-      </Menu>
-    </div>
+    <Nav>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/game">Play</NavLink>
+    </Nav>
   );
 };
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: #333;
+`;
+
+const NavLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 export default Navbar;
